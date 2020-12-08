@@ -12,19 +12,20 @@ let goldenY = y;
 
 function setup() {
   createCanvas(1600, 1600);
-  frameRate(12);
+  frameRate(5);
+  background(30, 100, 255);
 }
 
 console.log(`start; height=${goldenHeight}, X=${goldenX}, Y=${goldenY}`);
 
 function draw() {
   toggle = frameCount % 2;
-  background(30, 100, 255);
   stroke(0);
   strokeWeight(2);
   noFill();
   rect(x, y, width, height);
-  stroke(255);
+  fill(255);
+  stroke(0);
   rect(goldenX, goldenY, goldenWidth, goldenHeight);
   if (toggle === 0) {
     goldenY = goldenY + goldenHeight * phi;
